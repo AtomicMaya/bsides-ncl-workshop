@@ -1,0 +1,14 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE USERS (
+ID INT PRIMARY KEY NOT NULL,
+NAME TEXT NOT NULL,
+RECOVERY TEXT NOT NULL UNIQUE
+);
+INSERT INTO USERS VALUES(1,'sable','ASV{pHp_t@k3s_PhDs}');
+INSERT INTO USERS VALUES(2,'Eden','we planned this well');
+INSERT INTO USERS VALUES(3,'kai','smoof hair');
+INSERT INTO USERS VALUES(4,'Agi','pandes or posm?');
+INSERT INTO USERS VALUES(5,'Eli','hugs not drugs');
+INSERT INTO USERS VALUES(6,'memelord','keep on working you got this');
+COMMIT;
