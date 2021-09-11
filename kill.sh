@@ -1,2 +1,2 @@
 clear
-docker-compose down
+sudo docker-compose down
