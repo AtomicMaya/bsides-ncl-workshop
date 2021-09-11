@@ -6,6 +6,10 @@ services:
     hostname: workshop-dvwa
     ports:
       - '1337:80'
+    volumes_from:
+      - dvwa-persistence
+    depends_on:
+      - dvwa-persistence
   cve-2016-10033:
     image: vulnerables/cve-2016-10033
     container_name: workshop-cve-2016-10033
@@ -58,3 +62,13 @@ services:
     hostname: workshop-xss
     ports:
       - '1344:80'
+  dvwa-persistence:
+    image: tianon/true
+    container_name: workshop-dvwa-persistence
+    hostname: workshop-dvwa-persistence
+    volumes:
+      - './data:/data'
+
+volumes:
+  dvwa-data:
+    name: dvwa-persistence
